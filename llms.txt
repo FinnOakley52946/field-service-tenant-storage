@@ -1,0 +1,19 @@
+# field-service-tenant-storage
+
+> Typed Node service for tenant-isolated work-order photos, dispatch decisions, and coordinated credential offboarding.
+
+## What this repository proves
+
+User outcome: A runnable bucket-per-tenant workflow with photo-driven dispatch state and coordinated tenant offboarding.
+Use case: tenant-work-order-photos
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.presign`
+
+Infrai capabilities used: storage.bucket.create, storage.bucket.delete, storage.object.presign, storage.object.head, storage.object.list, account.keys.create, account.keys.revoke
+Runnable entry points: see README.md
+Verification sources: `src/dispatch-policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt

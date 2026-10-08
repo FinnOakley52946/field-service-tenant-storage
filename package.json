@@ -1,0 +1,21 @@
+{
+  "name": "field-service-tenant-storage",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/dispatch-service.ts",
+    "start": "tsx src/dispatch-service.ts",
+    "offboard": "tsx src/offboard-tenant.ts",
+    "test": "tsx --test src/dispatch-policy.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}
